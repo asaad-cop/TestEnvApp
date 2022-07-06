@@ -7,5 +7,10 @@
     <p><%= item.subtitle %></p>
     <p><%= item.body %></p>
     <%= image_tag item.main_image unless item.main_image.nil? %>
+    <hr>
     <%= link_to "Edit", edit_portfoly_path(item.id) %>
+    <hr>
+    <%= link_to "Delete Portfolio item", portfolies_path(item.id), method: :delete %>
+    <hr>
+    <hr>
 <% end %>
